@@ -29,6 +29,7 @@ enum class AppTheme(val rawValue: String, private val brandTitle: String?) {
     @SerialName("dracula") Dracula("dracula", "Dracula"),
     @SerialName("rosepine") RosePine("rosepine", "Rosé Pine"),
     @SerialName("github") GitHub("github", "GitHub"),
+    @SerialName("gruvbox-material") GruvboxMaterial("gruvbox-material", "Gruvbox Material"),
     ;
 
     val id: String get() = rawValue
@@ -323,6 +324,7 @@ object ThemePalette {
     val dracula: ThemeDefinition get() = GeneratedThemePalettes.dracula
     val rosepine: ThemeDefinition get() = GeneratedThemePalettes.rosepine
     val github: ThemeDefinition get() = GeneratedThemePalettes.github
+    val gruvboxMaterial: ThemeDefinition get() = GruvboxMaterialPalette.gruvboxMaterial
 
     fun definition(theme: AppTheme): ThemeDefinition = when (theme) {
         AppTheme.System -> system
@@ -332,6 +334,7 @@ object ThemePalette {
         AppTheme.Dracula -> dracula
         AppTheme.RosePine -> rosepine
         AppTheme.GitHub -> github
+        AppTheme.GruvboxMaterial -> gruvboxMaterial
     }
 
     /** Windows crossfade for this long when the theme or appearance changes. */

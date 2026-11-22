@@ -20,7 +20,7 @@ class ThemePaletteTests {
     @Test
     fun allCuratedThemesResolveLightAndDarkPalettes() {
         assertEquals(
-            listOf("system", "oc-2", "tokyonight", "catppuccin", "dracula", "rosepine", "github"),
+            listOf("system", "oc-2", "tokyonight", "catppuccin", "dracula", "rosepine", "github", "gruvbox-material"),
             AppTheme.entries.map { it.rawValue },
         )
 
